@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-12">
+        <h1>What is your Sun Sign?</h1>
+      </div>
+      <div class="col-12">
+        <input id="userdata" class="form-control">
+      </div>
+      <div class="col-12">
+        <button type="button" onclick="horoscope()" class="btn btn-primary btn-lg">Find Sign</button>
+      </div>
+    </div>
+    <div class="row reading">
+
+      <div class="col-12 info">
+      <h2 overflow:hidden id="signName"></h2>
+      <img overflow:hidden id="signImage" src="" alt="">
+      <p overflow:hidden id="yourHoroscope"></p>
+
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <!-- Default javacript-->
+  <script src="js/main.js"> </script>
+</html>
