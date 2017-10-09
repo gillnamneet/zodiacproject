@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Character Set -->
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
+    <title>Zodiac Project </title>
+    <!--Media Queries-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--css link-->
+    <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
-    <div class="row">
-      <div class="col-12">
-        <h1>What is your Sun Sign?</h1>
+  <body class = zodiacApp>
+    <div class="container">
+      <div class="row">
+        <h1>What is your zodiac personality?</h1>
       </div>
       <div class="col-12">
-        <input id="userdata" class="form-control">
+        <input id="userdata" class="form-control" placeholder="your sign goes here..">
       </div>
       <div class="col-12">
-        <button type="button" onclick="horoscope()" class="btn btn-primary btn-lg">Find Sign</button>
+        <button type="button" onclick="horoscope()" class="btn btn-primary btn-lg">Sumbit</button>
       </div>
     </div>
     <div class="row reading">
-
       <div class="col-12 info">
       <h2 overflow:hidden id="signName"></h2>
       <img overflow:hidden id="signImage" src="" alt="">
       <p overflow:hidden id="yourHoroscope"></p>
-
+      <h2 overflow:hidden id="errorMessage"></h2>
       </div>
     </div>
   </body>
+  <!--jquery link-->
   <script src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>

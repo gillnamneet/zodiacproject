@@ -1,78 +1,89 @@
 var zodiac = [
 	{
 		sign: "aquarius",
-		fortune: "Knowledge, Humanitarian, Serious, Insightful, Duplicitous",
+		personality: "Intellectual, Humanitarian, Serious, Insightful, Duplicitous",
 		image: "img/aquarius.png",
 	},
 	{
 		sign: "aries",
-		fortune: "Active, Demanding, Determined, Effective, Ambitious",
+		personality: "Courageous,Active, Demanding, Determined, Effective, Ambitious",
 		image: "img/aries.png"
 	},
 	{
 		sign: "cancer",
-		fortune: "Emotion, Diplomatic, Intensity, Impulsive, Selective",
+		personality: "Sensitive, Diplomatic, Intensity, Impulsive, Selective",
 		image: "img/cancer.png"
 	},
 	{
 		sign: "capricorn",
-		fortune: "Determination, Dominance, Perservering, Practical, Willful",
+		personality: "Determination, Dominance, Perservering, Practical, Willful",
 		image: "img/capricorn.png"
 	},
 	{
 		sign: "gemini",
-		fortune: "Communication, Indecision, Inquisitive, Intelligent, Changeable",
+		personality: "Communication, Indecision, Inquisitive, Intelligent, Changeable",
 		image: "img/gemini.png"
 	},
 	{
 		sign: "leo",
-		fortune: "Ruling, Warmth, Generosity, Faithful, Initiative",
+		personality: "Ruling, Warmth, Generosity, Faithful, Initiative",
 		image: "img/leo.png"
 	},
 	{
 		sign: "libra",
-		fortune: "Balance, Justice, Truth, Beauty, Perfection",
+		personality: "Balance, Justice, Truth, Beauty, Perfection",
 		image: "img/libra.png"
 	},
 	{
 		sign: "pisces",
-		fortune: "Fluctuation, Depth, Imagination, Reactive, Indecisive",
+		personality: "Fluctuation, Depth, Imagination, Reactive, Indecisive",
 		image: "img/pisces.png"
 	},
 	{
 		sign: "sagittarius",
-		fortune: "Philosophical, Motion, Experimentation, Optimism",
+		personality: "Philosophical, Motion, Experimentation, Optimism",
 		image: "img/sagittarius.png"
 	},
 	{
 		sign: "scorpio",
-		fortune: "Transient, Self-Willed, Purposeful, Unyielding",
+		personality: "Transient, Self-Willed, Purposeful, Unyielding",
 		image: "img/scorpio.png"
 	},
 	{
 		sign: "taurus",
-		fortune: "	Security, Subtle strength, Appreciation, Instruction, Patience",
+		personality: "	Security, Subtle strength, Appreciation, Instruction, Patience",
 		image: "img/taurus.png"
 	},
 	{
 		sign: "virgo",
-		fortune: "Analyzing, Practical, Reflective, Observation, Thoughtful",
+		personality: "Practical, Perfectionist,Reflective, Observation, Thoughtful",
 		image: "img/virgo.png"
 	}
 ];
+
 function horoscope() {
 var userdata = document.getElementById("userdata") // get user input such as leo or aries
+// set all html emements that display things to zero
+document.getElementById("signName").textContent = "";
+document.getElementById("yourHoroscope").textContent =  "";
+document.getElementById("signImage").src = null;
+document.getElementById("errorMessage").textContent=""
 
-    for(var x = 0; x < zodiac.length; x = x + 1) {
-        if(userdata.value.toLowerCase() == zodiac[x].sign) {
-          document.getElementById("signName").textContent = zodiac[x].sign;
-          document.getElementById("yourHoroscope").textContent =  zodiac[x].fortune;
-          document.getElementById("signImage").src = zodiac[x].image;
-
+// if the sign entered by user is not entered correctly. ALL THE variables set to zero
+//will remain zero
+	  for(var i = 0; i < zodiac.length; i = i + 1) {
+	    if(userdata.value.toLowerCase() == zodiac[i].sign) {
+	      document.getElementById("signName").textContent = zodiac[i].sign;
+	      document.getElementById("yourHoroscope").textContent =  zodiac[i].personality;
+	      document.getElementById("signImage").src = zodiac[i].image;
         }
 
-
     }
+	// if the values come out of the for loops as zeroes that means not a real sign
+	// then the error will be displayed
+if(document.getElementById("signName").textContent == ""){
+	document.getElementById("errorMessage").textContent="Please try again! "
 
+}
 
 }
