@@ -6,7 +6,7 @@ var zodiac = [
 	},
 	{
 		sign: "aries",
-		personality: "Courageous,Active, Demanding, Determined, Effective, Ambitious",
+		personality: "Courageous,Active, Demanding, Determined, Impatient, Ambitious",
 		image: "img/aries.png"
 	},
 	{
